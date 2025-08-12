@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --Green: hsl(75, 94%, 57%);
+      --White: hsl(0, 0%, 100%);
+      --Grey: hsl(0, 0%, 20%);
+      --darkGrey: hsl(0, 0%, 12%);
+      --blackGrey: hsl(0, 0%, 8%);
+    }
+
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--blackGrey);
+    }
+
+    body {
+      border: 2px solid black;
+      width: clamp(300px, 30vw, 700px);
+      height: clamp(60%, 75%, 80%);
+      background-color: var(--darkGrey);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      width: 100%;
+      height: clamp(250px, 35vh, 400px);
+    }
+
+    figure {
+      margin: 10px;
+      height: 30%;
+      /* width: 100%; */
+      display: flex;
+      justify-content: center;
+      /* border-radius: 999px; */
+    }
+
+    img {
+      object-fit: contain;
+      border-radius: 999px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      height: 70%;
+    }
+
+    header {
+      line-height: 1.4;
+    }
+
+    header .content h1 {
+      color: var(--White);
+      font-weight: 700;
+      font-size: clamp(18px, 1vw, 24);
+    }
+
+    header .content h2 {
+      color: var(--Green);
+      font-weight: 600;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      padding-bottom: 20px;
+    }
+
+    header .content p {
+      color: var(--White);
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    main {
+      /* margin-top: 16%; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: clamp(500px, 80vh, 800px);
+    }
+
+    .allaccounts {
+      height: 100%;
+      width: clamp(200px, 80%, 500px);
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 5%;
+
+    }
+
+    .account {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 2px solid blue; */
+      border-radius: 9px;
+      color: var(--White);
+      background-color:var(--Grey) ;
+transition: background-color 0.8s ease, transform 0.2s ease;
+
+    }
+    .account:hover{
+      background-color: var(--Green);
+      cursor: pointer;
+      /* transform: scaleX(.2); */
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <figure>
+      <img src="assets\images\avatar-jessica.jpeg" alt="">
+    </figure>
+    <div class="content">
+      <h1>Jessica Randall</h1>
+      <h2>London, United Kingdom</h2>
+      <p> "Front-end developer and avid reader."</p>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="allaccounts">
+      <div class="account">GitHub</div>
+      <div class="account">Frontend Mentor</div>
+      <div class="account"> LinkedIn</div>
+      <div class="account">Twitter</div>
+      <div class="account">Instagram</div>
+    </div>
+  </main>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>. -->
+  </div>
+</body>
+
+</html>
